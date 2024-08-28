@@ -1,0 +1,44 @@
+{
+    "name": "music-bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "repository": "https://github.com/nhutlamm/music-bot.git",
+    "author": "nhutlamm",
+    "type": "module",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js",
+        "format": "prettier --write ./src",
+        "format:check": "prettier --check ./src",
+        "del": "rm -rf node_modules && npm install"
+    },
+    "dependencies": {
+        "discord-hybrid-sharding": "^2.2.0",
+        "discord.js": "^14.15.3",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "mongoose": "^8.5.1",
+        "nanoid": "^3.3.7",
+        "pagination.djs": "^4.0.15",
+        "riffy": "^1.0.7-rc.1",
+        "riffy-spotify": "^1.0.2",
+        "string-progressbar": "^1.0.4"
+    },
+    "devDependencies": {
+        "chalk": "^4.1.2",
+        "module-alias": "^2.2.3",
+        "moment-timezone": "^0.5.45",
+        "prettier": "^3.3.3"
+    },
+    "imports": {
+        "#config": "./src/utils/config.js",
+        "#logger": "./src/utils/logger.js",
+        "#utils": "./src/utils/utils.js",
+        "#src/*": "./src/*",
+        "#helpers/*": "./src/helpers/*"
+    },
+    "engines": {
+        "node": ">=16.11.0"
+    }
+}
